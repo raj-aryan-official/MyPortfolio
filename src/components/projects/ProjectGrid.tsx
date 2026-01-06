@@ -20,8 +20,8 @@ export const ProjectGrid = () => {
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
                 <AnimatePresence>
-                    {filteredProjects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
+                    {filteredProjects.map((project, index) => (
+                        <ProjectCard key={project.id} project={project} priority={index < 6} />
                     ))}
                 </AnimatePresence>
             </motion.div>

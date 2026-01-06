@@ -119,7 +119,7 @@ export const About = () => {
                                     <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" />
                                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                                         <h3 className="text-xl font-bold text-slate-900 dark:text-white">Secondary Education (Class 10)</h3>
-                                        <span className="text-xs font-semibold px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded w-fit">2017 – 2019</span>
+                                        <span className="text-xs font-semibold px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded w-fit">2019 – 2021</span>
                                     </div>
                                     <a href="https://vidyajyotischool.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
                                         Vidya Jyoti School, Nalanda

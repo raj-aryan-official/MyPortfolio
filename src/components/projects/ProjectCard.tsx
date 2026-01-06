@@ -4,7 +4,7 @@ import type { Project } from '../../data/projects';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-export const ProjectCard = ({ project }: { project: Project }) => {
+export const ProjectCard = ({ project, priority = false }: { project: Project; priority?: boolean }) => {
     return (
         <motion.div
             layout
@@ -18,6 +18,8 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                 <img
                     src={project.image}
                     alt={project.title}
+                    loading={priority ? "eager" : "lazy"}
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
