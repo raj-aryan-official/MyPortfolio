@@ -92,6 +92,7 @@ export const Hero = () => {
                     <img
                         src="/raj.jpg"
                         alt="Raj Aryan"
+                        loading="eager"
                         className="w-full h-full object-cover opacity-90 mix-blend-normal hover:opacity-100 transition-opacity duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
