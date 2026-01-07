@@ -168,7 +168,7 @@ export const About = () => {
                                 className="relative w-32 h-32 mx-auto mb-4"
                             >
                                 <img
-                                    src="/raj2.jpg"
+                                    src="/raj2.webp"
                                     alt="Raj Aryan"
                                     className="w-full h-full rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-lg"
                                 />

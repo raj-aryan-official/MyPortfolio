@@ -90,7 +90,7 @@ export const Hero = () => {
                     className="relative w-full max-w-md aspect-square rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl shrink-0 bg-slate-900"
                 >
                     <img
-                        src="/raj.jpg"
+                        src="/raj.webp"
                         alt="Raj Aryan"
                         width="1410"
                         height="1410"
