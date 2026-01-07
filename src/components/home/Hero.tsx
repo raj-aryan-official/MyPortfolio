@@ -84,10 +84,22 @@ export const Hero = () => {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="relative w-full max-w-md aspect-square rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl shrink-0 bg-slate-900"
+                    initial={{ opacity: 0, scale: 1.2, y: 0 }}
+                    animate={{
+                        opacity: 1,
+                        scale: 1,
+                        y: [0, -15, 0]
+                    }}
+                    transition={{
+                        opacity: { duration: 0.8, delay: 0.2 },
+                        scale: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+                        y: {
+                            duration: 6,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        }
+                    }}
+                    className="relative w-full max-w-md md:w-[480px] aspect-square rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl shrink-0 bg-slate-900"
                 >
                     <img
                         src="/raj.webp"
