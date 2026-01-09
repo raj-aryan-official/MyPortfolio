@@ -1,10 +1,34 @@
 
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 import { Button } from '../common/Button';
 import { Link } from 'react-router-dom';
 
 export const Hero = () => {
+    const [rotation, setRotation] = useState(0);
+    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+    // Function to restart the auto-flip timer
+    const resetTimer = () => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        intervalRef.current = setInterval(() => {
+            setRotation(prev => prev + 180);
+        }, 4000);
+    };
+
+    useEffect(() => {
+        resetTimer();
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, []);
+
+    const handleManualFlip = () => {
+        setRotation(prev => prev + 180);
+        resetTimer(); // Reset timer on click
+    };
+
     return (
         <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-10 relative overflow-hidden">
             {/* Background Gradients */}
@@ -83,34 +107,62 @@ export const Hero = () => {
                     </div>
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 1.2, y: 0 }}
-                    animate={{
-                        opacity: 1,
-                        scale: 1,
-                        y: [0, -15, 0]
-                    }}
-                    transition={{
-                        opacity: { duration: 0.8, delay: 0.2 },
-                        scale: { duration: 0.8, ease: "easeOut", delay: 0.2 },
-                        y: {
-                            duration: 6,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                        }
-                    }}
-                    className="relative w-full max-w-md md:w-[480px] aspect-square rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl shrink-0 bg-slate-900"
-                >
-                    <img
-                        src="/raj.webp"
-                        alt="Raj Aryan"
-                        width="1410"
-                        height="1410"
-                        loading="eager"
-                        className="w-full h-full object-cover opacity-90 mix-blend-normal hover:opacity-100 transition-opacity duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-                </motion.div>
+                <div className="relative w-full max-w-md md:w-[480px] aspect-square perspective-1000 group" onClick={handleManualFlip}>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 1.2, y: 0 }}
+                        animate={{
+                            opacity: 1,
+                            scale: 1,
+                            y: [0, -15, 0],
+                            rotateY: rotation
+                        }}
+                        transition={{
+                            opacity: { duration: 0.8, delay: 0.2 },
+                            scale: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+                            y: {
+                                duration: 6,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            },
+                            rotateY: { duration: 0.8, ease: "easeInOut" }
+                        }}
+                        style={{ transformStyle: "preserve-3d" }}
+                        className="w-full h-full relative"
+                    >
+                        {/* Front Side - Founder */}
+                        <div className="absolute inset-0 w-full h-full backface-hidden rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl bg-slate-900 transform-style-3d">
+                            <img
+                                src="/raj.webp"
+                                alt="Raj Aryan - Founder"
+                                className="w-full h-full object-cover opacity-90 mix-blend-normal hover:opacity-100 transition-opacity duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent opacity-80" />
+                            <div className="absolute bottom-8 left-0 right-0 text-center">
+                                <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm text-blue-300 font-semibold tracking-wider uppercase text-sm">
+                                    Founder
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Back Side - Developer */}
+                        <div
+                            className="absolute inset-0 w-full h-full backface-hidden rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl bg-slate-900 transform-style-3d"
+                            style={{ transform: "rotateY(180deg)" }}
+                        >
+                            <img
+                                src="/raj3.webp"
+                                alt="Raj Aryan - Developer"
+                                className="w-full h-full object-cover opacity-90 mix-blend-normal hover:opacity-100 transition-opacity duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent opacity-80" />
+                            <div className="absolute bottom-8 left-0 right-0 text-center">
+                                <span className="inline-block px-4 py-1 rounded-full bg-purple-600/20 border border-purple-500/30 backdrop-blur-sm text-purple-300 font-semibold tracking-wider uppercase text-sm">
+                                    Developer
+                                </span>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

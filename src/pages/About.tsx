@@ -1,6 +1,7 @@
 
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { RevealOnScroll } from '../components/common/RevealOnScroll';
 
 
 export const About = () => {
@@ -13,141 +14,139 @@ export const About = () => {
                     <div className="lg:col-span-2 space-y-16">
 
                         {/* Header */}
-                        <section>
-                            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-4">
-                                <span className="text-blue-600 dark:text-blue-400">⚡</span> whoami
-                            </h1>
-                            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-                                Startup founder and Computer Science student driven by building impactful solutions and helping businesses turn ideas into reality.
-                            </p>
-                        </section>
+                        <RevealOnScroll>
+                            <section>
+                                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-4">
+                                    <span className="text-blue-600 dark:text-blue-400">⚡</span> whoami
+                                </h1>
+                                <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Startup founder and Computer Science student driven by building impactful solutions and helping businesses turn ideas into reality.
+                                </p>
+                            </section>
+                        </RevealOnScroll>
 
                         {/* Story */}
-                        <section>
-                            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                                <span className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
-                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                </span>
-                                The Backstory
-                            </h2>
-                            <div className="prose dark:prose-invert text-slate-600 dark:text-slate-400 max-w-none">
-                                <p className="mb-4">
-                                    Hello! I’m Raj Aryan. My journey into the startup world began over five years ago with a simple curiosity about how businesses grow and ideas turn into reality. What started as helping a few founders quickly evolved into a long-term commitment to building and supporting startups.
-                                </p>
-                                <p className="mb-4">
-                                    Over the past 5+ years, I’ve worked with more than 6 startups founding some, partnering in others, and closely supporting many along the way. During this journey, I’ve helped 20+ startups and businesses shape their ideas, make early decisions, and move from uncertainty to clarity.
-                                </p>
-                                <p className="mb-4">
-                                    I enjoy working behind the scenes as much as leading from the front listening to founders, understanding business challenges, and finding practical ways to create impact. Every startup has a different story, and being part of so many has taught me the value of patience, adaptability, and long-term thinking.
-                                </p>
-                                <p>
-                                    Today, I continue to work with startups across different stages, helping them grow with confidence and purpose. For me, it’s not just about building companies, it’s about building trust, relationships, and meaningful progress.
-                                </p>
-                            </div>
-                        </section>
+                        <RevealOnScroll delay={0.1}>
+                            <section>
+                                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                                    <span className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                        </svg>
+                                    </span>
+                                    The Backstory
+                                </h2>
+                                <div className="prose dark:prose-invert text-slate-600 dark:text-slate-400 max-w-none">
+                                    <p className="mb-4">
+                                        Hello! I’m Raj Aryan. My journey into the startup world began over five years ago with a simple curiosity about how businesses grow and ideas turn into reality. What started as helping a few founders quickly evolved into a long-term commitment to building and supporting startups.
+                                    </p>
+                                    <p className="mb-4">
+                                        Over the past 5+ years, I’ve worked with more than 6 startups founding some, partnering in others, and closely supporting many along the way. During this journey, I’ve helped 20+ startups and businesses shape their ideas, make early decisions, and move from uncertainty to clarity.
+                                    </p>
+                                    <p className="mb-4">
+                                        I enjoy working behind the scenes as much as leading from the front listening to founders, understanding business challenges, and finding practical ways to create impact. Every startup has a different story, and being part of so many has taught me the value of patience, adaptability, and long-term thinking.
+                                    </p>
+                                    <p>
+                                        Today, I continue to work with startups across different stages, helping them grow with confidence and purpose. For me, it’s not just about building companies, it’s about building trust, relationships, and meaningful progress.
+                                    </p>
+                                </div>
+                            </section>
+                        </RevealOnScroll>
 
                         {/* Academic Journey */}
-                        <section>
-                            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                                <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                </svg>
-                                Academic Journey
-                            </h2>
-
-                            <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                                A journey shaped by strong academic foundations, science-driven thinking, and continuous learning across data science, computer science, and emerging technologies.
-                            </p>
-
-                            <div className="space-y-12 pl-4 border-l-2 border-slate-200 dark:border-slate-800">
-
-                                {/* B.Tech CSE */}
-                                <div className="relative pl-8">
-                                    <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-blue-600 bg-white dark:bg-slate-900" />
-                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">B.Tech - Computer Science Engineering (AI & ML)</h3>
-                                        <span className="text-xs font-semibold px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded w-fit">2024 – Present</span>
+                        <RevealOnScroll delay={0.2}>
+                            <section>
+                                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                                    <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                    </svg>
+                                    Academic Journey
+                                </h2>
+                                <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                    A journey shaped by strong academic foundations, science-driven thinking, and continuous learning across data science, computer science, and emerging technologies.
+                                </p>
+                                <div className="space-y-12 pl-4 border-l-2 border-slate-200 dark:border-slate-800">
+                                    {/* B.Tech CSE */}
+                                    <div className="relative pl-8">
+                                        <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-blue-600 bg-white dark:bg-slate-900" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white">B.Tech - Computer Science Engineering (AI & ML)</h3>
+                                            <span className="text-xs font-semibold px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded w-fit">2024 – Present</span>
+                                        </div>
+                                        <div className="mb-3">
+                                            <a href="https://polariscampus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline block">
+                                                Polaris School of Technology, Bengaluru
+                                            </a>
+                                            <a href="https://www.msu.edu.in/" target="_blank" rel="noopener noreferrer" className="text-slate-500 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors block mt-1">
+                                                (Connected with Medhavi Skills University)
+                                            </a>
+                                        </div>
+                                        <p className="text-slate-600 dark:text-slate-400">
+                                            Alongside my data science degree, I am pursuing B.Tech in Computer Science Engineering with specialization in Artificial Intelligence & Machine Learning. This program is shaping my understanding of computer science fundamentals, modern software development, AI/ML concepts, and real world applications.
+                                        </p>
                                     </div>
-                                    <div className="mb-3">
-                                        <a href="https://polariscampus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline block">
-                                            Polaris School of Technology, Bengaluru
+                                    {/* BS Data Science */}
+                                    <div className="relative pl-8">
+                                        <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-blue-600 bg-white dark:bg-slate-900" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white">B.S. - Data Science & Applications</h3>
+                                            <span className="text-xs font-semibold px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded w-fit">2024 – Present</span>
+                                        </div>
+                                        <a href="https://www.iitm.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
+                                            Indian Institute of Technology Madras (IIT Madras)
                                         </a>
-                                        <a href="https://www.msu.edu.in/" target="_blank" rel="noopener noreferrer" className="text-slate-500 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors block mt-1">
-                                            (Connected with Medhavi Skills University)
+                                        <p className="text-slate-600 dark:text-slate-400">
+                                            I am currently pursuing a B.S. in Data Science and Applications from IIT Madras. This program is shaping my understanding of data driven decision making, statistics, analytical thinking, and real world applications of data science.
+                                        </p>
+                                    </div>
+                                    {/* Class 12 */}
+                                    <div className="relative pl-8">
+                                        <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-indigo-500 bg-white dark:bg-slate-900" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Senior Secondary Education</h3>
+                                            <span className="text-xs font-semibold px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded w-fit">2021 – 2023</span>
+                                        </div>
+                                        <a href="https://www.aspcspatna.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
+                                            A S S Patna Central School, Patna
                                         </a>
+                                        <p className="text-slate-600 dark:text-slate-400">
+                                            I pursued my higher secondary education with Physics, Chemistry, and Mathematics (PCM). This phase strengthened my analytical mindset and problem-solving skills.
+                                        </p>
                                     </div>
-                                    <p className="text-slate-600 dark:text-slate-400">
-                                        Alongside my data science degree, I am pursuing B.Tech in Computer Science Engineering with specialization in Artificial Intelligence & Machine Learning. This is where my technical journey truly takes shape covering computer science fundamentals, modern software development, AI/ML concepts, and real world applications. This program plays a central role in building my technical depth, problem-solving ability, and industry ready skill set.
-                                    </p>
-                                </div>
-
-                                {/* BS Data Science */}
-                                <div className="relative pl-8">
-                                    <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-blue-600 bg-white dark:bg-slate-900" />
-                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">B.S. - Data Science & Applications</h3>
-                                        <span className="text-xs font-semibold px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded w-fit">2024 – Present</span>
+                                    {/* Class 10 */}
+                                    <div className="relative pl-8">
+                                        <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Secondary Education</h3>
+                                            <span className="text-xs font-semibold px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded w-fit">2019 – 2021</span>
+                                        </div>
+                                        <a href="https://vidyajyotischool.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
+                                            Vidya Jyoti School, Nalanda
+                                        </a>
+                                        <p className="text-slate-600 dark:text-slate-400">
+                                            My academic foundation began here, where I developed discipline and a deep interest in science and technology.
+                                        </p>
                                     </div>
-                                    <a href="https://www.iitm.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
-                                        Indian Institute of Technology Madras (IIT Madras)
-                                    </a>
-                                    <p className="text-slate-600 dark:text-slate-400">
-                                        I am currently pursuing a B.S. in Data Science and Applications from IIT Madras. This program is shaping my understanding of data driven decision making, statistics, analytical thinking, and real world applications of data science. It has strengthened my ability to approach problems with a research oriented and solution focused mindset.
-                                    </p>
                                 </div>
-
-                                {/* Class 12 */}
-                                <div className="relative pl-8">
-                                    <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-indigo-500 bg-white dark:bg-slate-900" />
-                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">Senior Secondary Education (Class 12 – PCM)</h3>
-                                        <span className="text-xs font-semibold px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded w-fit">2021 – 2023</span>
-                                    </div>
-                                    <a href="https://www.aspcspatna.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
-                                        A S S Patna Central School, Patna
-                                    </a>
-                                    <p className="text-slate-600 dark:text-slate-400">
-                                        I pursued my higher secondary education with Physics, Chemistry, and Mathematics (PCM) as my core subjects. This phase strengthened my analytical mindset and quantitative reasoning. I learned structured problem solving, critical thinking, and discipline skills that played a key role in preparing me for engineering and data driven fields.
-                                    </p>
-                                </div>
-
-                                {/* Class 10 */}
-                                <div className="relative pl-8">
-                                    <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" />
-                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">Secondary Education (Class 10)</h3>
-                                        <span className="text-xs font-semibold px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded w-fit">2019 – 2021</span>
-                                    </div>
-                                    <a href="https://vidyajyotischool.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
-                                        Vidya Jyoti School, Nalanda
-                                    </a>
-                                    <p className="text-slate-600 dark:text-slate-400">
-                                        My academic foundation began at Vidya Jyoti School, where I developed strong discipline, curiosity, and a habit of consistent learning. During these years, I built core problem solving skills and a deep interest in logical thinking, mathematics, and understanding how things work which later shaped my inclination toward science and technology.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
+                            </section>
+                        </RevealOnScroll>
 
                         {/* Current Focus */}
-                        <section className="bg-slate-900 p-8 rounded-2xl border border-slate-800 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -z-10" />
-                            <h2 className="text-2xl font-bold text-white mb-4">Current Focus & Aspirations</h2>
-                            <div className="prose dark:prose-invert text-slate-300 max-w-none">
-                                <p className="mb-4">
-                                    I am currently focused on building meaningful solutions that make everyday life easier for normal people, especially aiming to support and uplift the lower and underserved sections of society through my startup initiatives. My goal is to create impact-driven products that help individuals upgrade their skills, opportunities, and quality of life.
-                                </p>
-                                <p className="mb-4">
-                                    Alongside this, I actively aspire to contribute to open-source projects, collaborate with communities, and share knowledge to build tools that benefit everyone. I am equally passionate about helping new startups and founders, guiding them through early challenges, and supporting ideas that aim to create positive, long-term change.
-                                </p>
-                                <p>
-                                    At the core, my aspiration is to build with purpose working on projects that matter, empowering people, and growing alongside communities and innovators who believe in making technology and entrepreneurship accessible to all.
-                                </p>
-                            </div>
-
-                        </section>
+                        <RevealOnScroll delay={0.3}>
+                            <section className="bg-slate-900 p-8 rounded-2xl border border-slate-800 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -z-10" />
+                                <h2 className="text-2xl font-bold text-white mb-4">Current Focus & Aspirations</h2>
+                                <div className="prose dark:prose-invert text-slate-300 max-w-none">
+                                    <p className="mb-4">
+                                        I am currently focused on building meaningful solutions that make everyday life easier for normal people, especially aiming to support and uplift the lower and underserved sections of society through my startup initiatives.
+                                    </p>
+                                    <p className="mb-4">
+                                        My aspiration is to build with purpose working on projects that matter, empowering people, and growing alongside communities and innovators.
+                                    </p>
+                                </div>
+                            </section>
+                        </RevealOnScroll>
 
                     </div>
 
