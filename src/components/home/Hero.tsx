@@ -129,25 +129,14 @@ export const Hero = () => {
                         style={{ transformStyle: "preserve-3d" }}
                         className="w-full h-full relative"
                     >
-                        {/* Front Side - Founder */}
-                        <div className="absolute inset-0 w-full h-full backface-hidden rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl bg-slate-900 transform-style-3d">
-                            <img
-                                src="/raj.webp"
-                                alt="Raj Aryan - Founder"
-                                className="w-full h-full object-cover opacity-90 mix-blend-normal hover:opacity-100 transition-opacity duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent opacity-80" />
-                            <div className="absolute bottom-8 left-0 right-0 text-center">
-                                <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm text-blue-300 font-semibold tracking-wider uppercase text-sm">
-                                    Founder
-                                </span>
-                            </div>
-                        </div>
-
                         {/* Back Side - Developer */}
                         <div
-                            className="absolute inset-0 w-full h-full backface-hidden rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl bg-slate-900 transform-style-3d"
-                            style={{ transform: "rotateY(180deg)" }}
+                            className="absolute inset-0 w-full h-full rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl bg-slate-900"
+                            style={{
+                                transform: "rotateY(180deg) translateZ(1px)",
+                                backfaceVisibility: 'hidden',
+                                WebkitBackfaceVisibility: 'hidden'
+                            }}
                         >
                             <img
                                 src="/raj3.webp"
@@ -158,6 +147,28 @@ export const Hero = () => {
                             <div className="absolute bottom-8 left-0 right-0 text-center">
                                 <span className="inline-block px-4 py-1 rounded-full bg-purple-600/20 border border-purple-500/30 backdrop-blur-sm text-purple-300 font-semibold tracking-wider uppercase text-sm">
                                     Developer
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Front Side - Founder */}
+                        <div
+                            className="absolute inset-0 w-full h-full rounded-full md:rounded-3xl overflow-hidden border-4 border-slate-800/50 shadow-2xl bg-slate-900"
+                            style={{
+                                backfaceVisibility: 'hidden',
+                                WebkitBackfaceVisibility: 'hidden',
+                                transform: 'translateZ(1px)'
+                            }}
+                        >
+                            <img
+                                src="/raj.webp"
+                                alt="Raj Aryan - Founder"
+                                className="w-full h-full object-cover opacity-90 mix-blend-normal hover:opacity-100 transition-opacity duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent opacity-80" />
+                            <div className="absolute bottom-8 left-0 right-0 text-center">
+                                <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm text-blue-300 font-semibold tracking-wider uppercase text-sm">
+                                    Founder
                                 </span>
                             </div>
                         </div>
