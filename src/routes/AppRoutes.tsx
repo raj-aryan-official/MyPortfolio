@@ -6,7 +6,8 @@ import { Layout } from '../components/common/Layout';
 import { Loading } from '../components/common/Loading';
 
 // Lazy load pages for code splitting
-const Home = lazy(() => import('../pages/Home'));
+import Home from '../pages/Home';
+
 const About = lazy(() => import('../pages/About'));
 const Projects = lazy(() => import('../pages/Projects'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));

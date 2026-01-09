@@ -4,11 +4,22 @@ import { motion } from 'framer-motion';
 export const Loading = () => {
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-white dark:bg-slate-950 z-50">
-            <motion.div
-                className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            />
+            <div className="flex items-center gap-1.5 h-12">
+                {[0, 1, 2, 3, 4].map((index) => (
+                    <motion.div
+                        key={index}
+                        className="w-1.5 bg-blue-600 dark:bg-blue-400 rounded-full"
+                        initial={{ height: "10%" }}
+                        animate={{ height: ["10%", "100%", "10%"] }}
+                        transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            delay: index * 0.15,
+                            ease: [0.4, 0, 0.2, 1] // Smooth bezier curve
+                        }}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
