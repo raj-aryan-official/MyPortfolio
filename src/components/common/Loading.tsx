@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Loading = () => {
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-white dark:bg-slate-950 z-50">
+        <div className="w-full h-full min-h-[calc(100vh-4rem)] flex items-center justify-center bg-white dark:bg-slate-950">
             <div className="flex items-center gap-1.5 h-12">
                 {[0, 1, 2, 3, 4].map((index) => (
                     <motion.div

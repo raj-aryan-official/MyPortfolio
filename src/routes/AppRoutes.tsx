@@ -1,9 +1,8 @@
-import { Suspense, lazy } from 'react';
+import { lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { PageTransition } from '../components/common/PageTransition';
 import { Layout } from '../components/common/Layout';
-import { Loading } from '../components/common/Loading';
 
 // Lazy load pages for code splitting
 import Home from '../pages/Home';
@@ -19,21 +18,19 @@ const AppRoutes = () => {
     const location = useLocation();
 
     return (
-        <Suspense fallback={<Loading />}>
-            <AnimatePresence mode="wait">
-                <Routes location={location} key={location.pathname}>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<PageTransition><Home /></PageTransition>} />
-                        <Route path="about" element={<PageTransition><About /></PageTransition>} />
-                        <Route path="projects" element={<PageTransition><Projects /></PageTransition>} />
-                        <Route path="projects/:id" element={<PageTransition><ProjectDetails /></PageTransition>} />
-                        <Route path="experience" element={<PageTransition><Experience /></PageTransition>} />
-                        <Route path="contact" element={<PageTransition><Contact /></PageTransition>} />
-                        <Route path="profiles" element={<PageTransition><Profiles /></PageTransition>} />
-                    </Route>
-                </Routes>
-            </AnimatePresence>
-        </Suspense>
+        <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<PageTransition><Home /></PageTransition>} />
+                    <Route path="about" element={<PageTransition><About /></PageTransition>} />
+                    <Route path="projects" element={<PageTransition><Projects /></PageTransition>} />
+                    <Route path="projects/:id" element={<PageTransition><ProjectDetails /></PageTransition>} />
+                    <Route path="experience" element={<PageTransition><Experience /></PageTransition>} />
+                    <Route path="contact" element={<PageTransition><Contact /></PageTransition>} />
+                    <Route path="profiles" element={<PageTransition><Profiles /></PageTransition>} />
+                </Route>
+            </Routes>
+        </AnimatePresence>
     );
 };
 
