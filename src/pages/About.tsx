@@ -100,12 +100,26 @@ export const About = () => {
                                             I am currently pursuing a B.S. in Data Science and Applications from IIT Madras. This program is shaping my understanding of data driven decision making, statistics, analytical thinking, and real world applications of data science.
                                         </p>
                                     </div>
+                                    {/* Diploma in Fine Arts */}
+                                    <div className="relative pl-8">
+                                        <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-blue-600 bg-white dark:bg-slate-900" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Diploma in Fine Arts (Senior Level / BFA Equivalent)</h3>
+                                            <span className="text-xs font-semibold px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded w-fit">2020 – 2026</span>
+                                        </div>
+                                        <a href="https://pracheenkalakendra.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
+                                            Pracheen Kala Kendra, Sector 35, Chandigarh – 160022, India
+                                        </a>
+                                        <p className="text-slate-600 dark:text-slate-400">
+                                            Alongside my technical and entrepreneurial education, I pursued a senior-level diploma in Fine Arts, equivalent to a BFA. This program focused on advanced artistic study, creative expression, and visual thinking. It strengthened my sense of aesthetics, design sensibility, and attention to detail skills that strongly influence my work in product design, user experience, and creative problem-solving.
+                                        </p>
+                                    </div>
                                     {/* Class 12 */}
                                     <div className="relative pl-8">
-                                        <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-indigo-500 bg-white dark:bg-slate-900" />
+                                        <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full border-2 border-blue-600 bg-white dark:bg-slate-900" />
                                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                                             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Senior Secondary Education</h3>
-                                            <span className="text-xs font-semibold px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded w-fit">2021 – 2023</span>
+                                            <span className="text-xs font-semibold px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded w-fit">2021 – 2023</span>
                                         </div>
                                         <a href="https://www.aspcspatna.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-2 block">
                                             A S S Patna Central School, Patna
