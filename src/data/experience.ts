@@ -111,7 +111,8 @@ export const experienceSections: ExperienceCategory[] = [
                     'Growth, branding, and marketing',
                     'Fundraising and financial planning'
                 ],
-                technologies: ['Community', 'Ecosystem', 'Leadership']
+                technologies: ['Community', 'Ecosystem', 'Leadership'],
+                link: 'https://sankalpsiddhi.netlify.app/'
             },
             {
                 id: 'st3',
